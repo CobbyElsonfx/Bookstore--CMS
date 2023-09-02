@@ -6,7 +6,7 @@ function Book({ book }) {
   return (
     <div>
 
-      <div key={book.id} className=" bookDetails">
+      <div className=" bookDetails">
         <div className="firstCol">
           <div>
             <small>{book.author}</small>

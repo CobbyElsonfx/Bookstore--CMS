@@ -25,7 +25,7 @@ function BookList() {
   return (
     <div>
       {
-      books.map((eachBook) => <Book key={book.id} book={eachBook} />)
+      books.map((eachBook) => <Book key={eachBook.id} book={eachBook} />)
       }
     </div>
   );

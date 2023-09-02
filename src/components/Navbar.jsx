@@ -1,10 +1,11 @@
 import React from 'react';
+import user from '../assets/user.png';
 
 function Navbar() {
   return (
     <div className="panel-bg">
       <nav className="navbar">
-        <ul>
+        <ul className="navItems">
           <li>
             <a href="./" className="bookstore-CMS">Bookstore CMS</a>
           </li>
@@ -16,7 +17,7 @@ function Navbar() {
           </li>
         </ul>
         <div>
-          <img src="../public/assets/user.png" alt="avatar" className="avatar" />
+          <img src={user} alt="avatar" className="avatar" />
         </div>
       </nav>
     </div>

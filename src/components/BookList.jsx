@@ -1,4 +1,5 @@
 import React from 'react';
+import progres from '../assets/progress.png';
 
 function BookList() {
   const books = [
@@ -23,7 +24,7 @@ function BookList() {
   ];
   return (
     <div>
-       {
+      {
         books.map((book) => (
           <div key={book.id} className=" bookDetails">
             <div className="firstCol">
@@ -40,7 +41,7 @@ function BookList() {
             </div>
             <div className="progressBarAndUpdateButton">
               <div className="secondCol">
-                <img src="" alt="" />
+                <img src={progres} alt="progresImg" className="progressImg" />
                 <div className="aboutProgress">
                   <div className="oval">
                     <p className="progress">64%</p>

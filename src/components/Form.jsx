@@ -5,15 +5,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice'; // Import the 'addBook' action
 
 function Form() {
-  const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
   const [title, setTitle] = useState(''); // State for the book title
   const [author, setAuthor] = useState(''); // State for the author
   const [category, setCategory] = useState('action'); // State for the book category
-  const id = books.length + 1;
+  function generateUniqueId() {
+    const id = Math.random().toString(36).substring(2, 10);
+    return id;
+  }
+  
   const handleAddBook = () => {
     const book = {
-      id,
+      id:generateUniqueId(),
       title,
       author,
       category,

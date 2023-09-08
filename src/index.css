@@ -106,12 +106,12 @@ a {
 }
 
 /* mobile version */
-@media(width <= 765px){
+@media (width <= 765px) {
   .pageWrapper {
     margin: auto;
     width: 100vw;
   }
-  
+
   .bookForm {
     display: flex;
     flex-direction: column;

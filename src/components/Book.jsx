@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import progres from '../assets/progress.png';
+import { removeBook } from '../redux/books/booksSlice';
 
 function Book({ book }) {
+  const dispatch = useDispatch();
   return (
     <div>
-
       <div className=" bookDetails">
         <div className="firstCol">
           <div>
@@ -15,7 +17,13 @@ function Book({ book }) {
           </div>
           <div>
             <button type="button" className="book-btn">Comments</button>
-            <button type="button" className="book-btn">Remove</button>
+            <button
+              type="button"
+              className="book-btn"
+              onClick={() => dispatch(removeBook(book.id))}
+            >
+              Remove
+            </button>
             <button type="button" className="book-btn">Edit</button>
           </div>
         </div>

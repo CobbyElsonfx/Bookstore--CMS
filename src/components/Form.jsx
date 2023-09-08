@@ -1,7 +1,7 @@
 // Form.js
 
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice'; // Import the 'addBook' action
 
 function Form() {
@@ -13,10 +13,10 @@ function Form() {
     const id = Math.random().toString(36).substring(2, 10);
     return id;
   }
-  
+
   const handleAddBook = () => {
     const book = {
-      id:generateUniqueId(),
+      id: generateUniqueId(),
       title,
       author,
       category,

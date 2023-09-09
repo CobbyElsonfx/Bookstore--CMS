@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice'; // Import the 'addBook' action
+import { addBookAsync } from '../redux/books/booksSlice'; // Import the 'addBook' action
 import Button from './Button';
 
 function Form() {
@@ -20,7 +20,7 @@ function Form() {
       author,
       category,
     };
-    dispatch(addBook(book));
+    dispatch(addBookAsync(book));
     setTitle('');
     setAuthor('');
     setCategory('action');

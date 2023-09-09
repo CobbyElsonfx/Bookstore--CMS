@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import progres from '../assets/progress.png';
-import { removeBook } from '../redux/books/booksSlice';
+import { removeBookAsync } from '../redux/books/booksSlice';
 import Button from './Button';
 
 function Book({ book }) {
   const dispatch = useDispatch();
   const handleRemoveBook = (bookId) => {
-    dispatch(removeBook(bookId));
+    dispatch(removeBookAsync(bookId));
   };
   return (
     <div>

@@ -1,8 +1,7 @@
-// Form.js
-
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice'; // Import the 'addBook' action
+import { addBookAsync } from '../redux/books/booksSlice'; // Import the 'addBook' action
+import Button from './Button';
 
 function Form() {
   const dispatch = useDispatch();
@@ -16,12 +15,12 @@ function Form() {
 
   const handleAddBook = () => {
     const book = {
-      id: generateUniqueId(),
+      item_id: generateUniqueId(),
       title,
       author,
       category,
     };
-    dispatch(addBook(book));
+    dispatch(addBookAsync(book));
     setTitle('');
     setAuthor('');
     setCategory('action');
@@ -58,9 +57,7 @@ function Form() {
         </select>
       </div>
       <div>
-        <button type="button" onClick={handleAddBook}>
-          Add Book
-        </button>
+        <Button onClick={handleAddBook} className="addBook" label="Add Book" />
       </div>
     </div>
   );

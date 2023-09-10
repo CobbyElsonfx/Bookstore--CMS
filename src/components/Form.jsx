@@ -27,7 +27,7 @@ function Form() {
   };
 
   return (
-    <div className="pageWrapper bookForm">
+    <div className=" bookForm innerWrapper">
       <div className="bookTitle">
         <input
           type="text"
@@ -48,12 +48,17 @@ function Form() {
         <select
           name="category"
           id="category"
+          className="categorySelect"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
-          <option value="action">Action</option>
-          <option value="economy">Economy</option>
-          <option value="scienceFiction">Science Fiction</option>
+          <option value="Business">Business</option>
+          <option value="Human Nature">Human Nature</option>
+          <option value="Love">Love</option>
+          <option value="Academics">Academics</option>
+          <option value="Life Lessons">Life Lessons</option>
+          <option value="Economy">Economy</option>
+          <option value="Science Fiction">Science Fiction</option>
         </select>
       </div>
       <div>

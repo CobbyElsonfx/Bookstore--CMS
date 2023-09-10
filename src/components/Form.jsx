@@ -34,6 +34,7 @@ function Form() {
           placeholder="Book Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          required
         />
       </div>
       <div className="bookAuthor">
@@ -41,14 +42,14 @@ function Form() {
           type="text"
           placeholder="Author"
           value={author}
-          onChange={(e) => setAuthor(e.target.value)} // Handle author input change
+          onChange={(e) => setAuthor(e.target.value)}
+          required// Handle author input change
         />
       </div>
       <div className="bookCategory">
         <select
           name="category"
           id="category"
-          className="categorySelect"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
